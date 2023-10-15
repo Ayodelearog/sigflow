@@ -3,11 +3,16 @@
 import { useEffect, useState } from 'react';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { IoSearch } from 'react-icons/io5';
+import { LiaEyeSolid } from 'react-icons/lia';
+import { BsArchive } from 'react-icons/bs';
+import { RiDeleteBinLine } from 'react-icons/ri';
 import { useRouter } from 'next/navigation'
 
 
 
 const Transformations = () => {
+    const [viewMore, setViewMore] = useState(false)
+
     const router = useRouter()
 
     useEffect(()=> {
@@ -18,16 +23,13 @@ const Transformations = () => {
         }
     }, [router])
 
-
-   
-
-
-
-
-
+    const toggleViewMore = () => {
+        setViewMore(prevState=> !prevState)
+    }
 
     return (
-        <section className='min-h-screen  overflow-y-auto flex flex-col mb-44'>
+        <section className='max-h-screen  flex flex-col mb-80 pb-24'>
+            <div className=' h-screen'>
             <div className="flex justify-between">
                 <h1 className="font-semi-bold text-lg">Transformations</h1>
 
@@ -63,15 +65,15 @@ const Transformations = () => {
 
             <div class="grid grid-cols-3 gap-1 mt-8 py-5  border rounded-md overflow-y-auto">
                 <div class="col-span-1 p-4 font-normal text-sm text-gray-600">Name</div>
-                <div class="col-span-1 p-4 font-normal text-sm text-gray-600">Creation Date</div>
+                <div class="col-span-1 p-4 font-normal text-sm text-gray-600 ml-1">Creation Date</div>
                 <div class="col-span-1 p-4 font-normal text-sm text-gray-600 pl-6">Status</div>
 
                 <div class="col-span-3 grid grid-cols-3 gap-4 border-b border-gray-200">
+
                     <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center">Gotham Asylum</div>
                     <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center">10th Aug, 2023</div>
-                    <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center pr-8"
-                    >
-                        <span className='px-3 py-1 bg-hover-bg rounded font-medium text-xs text-primary'>Paused</span> <BsThreeDotsVertical color="#828282" />
+                    <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center pr-8 relative">
+                        <span className='px-3 py-1 bg-hover-bg rounded font-medium text-xs text-primary'>Paused</span> <BsThreeDotsVertical size={20} color="#828282" />
                     </div>
                 </div>
 
@@ -80,7 +82,7 @@ const Transformations = () => {
                     <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center">10th Aug, 2023</div>
                     <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center pr-8"
                     >
-                        <span className='px-3 py-1 bg-gray-200 rounded font-medium text-xs text-white'>Archived</span> <BsThreeDotsVertical color="#828282" />
+                        <span className='px-3 py-1 bg-gray-200 rounded font-medium text-xs text-white'>Archived</span> <BsThreeDotsVertical size={20} color="#828282" />
                     </div>
                 </div>
 
@@ -89,16 +91,20 @@ const Transformations = () => {
                     <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center">10th Aug, 2023</div>
                     <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center pr-8"
                     >
-                        <span className='px-3 py-1 bg-hover-bg rounded font-medium text-xs text-primary'>Paused</span> <BsThreeDotsVertical color="#828282" />
+                        <span className='px-3 py-1 bg-hover-bg rounded font-medium text-xs text-primary'>Paused</span> <BsThreeDotsVertical size={20} color="#828282" />
                     </div>
                 </div>
 
                 <div class="col-span-3 grid grid-cols-3 gap-4 border-b border-gray-200">
                     <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center">Gotham Asylum</div>
                     <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center">10th Aug, 2023</div>
-                    <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center pr-8"
-                    >
-                        <span className='px-3 py-1 bg-gray-200 rounded font-medium text-xs text-white'>Archived</span> <BsThreeDotsVertical color="#828282" />
+                    <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center pr-8 relative">
+                        <span className='px-3 py-1 bg-gray-200 rounded font-medium text-xs text-white'>Archived</span> <BsThreeDotsVertical size={20} color="#828282" onClick={toggleViewMore} className='cursor-pointer active:text-primary' />
+                        { viewMore && <div className='p-4 w-max rounded flex flex-col gap-2 bg-white absolute top-10 right-10 transition-all duration-300 shadow-md'>
+                            <div className='flex gap-2 items-center'><LiaEyeSolid size={13} className='text-gray-800' /> <p className='font-normal text-xs text-gray-800'>View Transformation</p></div>
+                            <div className='flex gap-2 items-center'><BsArchive size={13} className='text-gray-800' /> <p className='font-normal text-xs text-gray-800'>Archive Transformation</p></div>
+                            <div className='flex gap-2 items-center'><RiDeleteBinLine size={13} className='text-red-600' /> <p className='font-normal text-xs text-red-600 '>Delete</p></div>
+                        </div>}
                     </div>
                 </div>
 
@@ -124,7 +130,7 @@ const Transformations = () => {
                 </div>
             </div>
 
-
+            </div>
         </section>
     );
 }

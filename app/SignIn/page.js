@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import { BiLogoGithub } from 'react-icons/bi';
 import { FcGoogle } from 'react-icons/fc';
 import { HiOutlineKey } from 'react-icons/hi';
-import { PiEyeSlashLight } from 'react-icons/pi';
+import { LiaEyeSolid } from 'react-icons/lia';
+import { LiaEyeSlashSolid } from 'react-icons/lia';
 
  
 import { useRouter } from 'next/navigation'
@@ -68,7 +69,7 @@ const SignIn = () => {
 
 
     return (
-        <div className='w-ful h-screen flex flex-col  py-8 px-4 pb-96'>
+        <div className='w-ful h-screen flex flex-col  py-8 px-4 mb-96'>
             <Image
                 src="/Sigflow logo.png"
                 width={90}
@@ -103,7 +104,8 @@ const SignIn = () => {
                             onChange={handleChange}
                             />
                             <div className="absolute right-3 top-2">
-                                <PiEyeSlashLight size={20} className='text-gray-600 cursor-pointer' onClick={togglePasswordVisibility} />
+                                {showPassword && <LiaEyeSolid size={20} className='text-gray-600 cursor-pointer' onClick={togglePasswordVisibility} />}
+                                {!showPassword && <LiaEyeSlashSolid size={20} className='text-gray-600 cursor-pointer' onClick={togglePasswordVisibility} />}
                             </div>
                         </div>
                         
@@ -149,7 +151,7 @@ const SignIn = () => {
                         </div>
                     </div>
             </div>
-                <p className='text-center mt-3 text-medium font-normal'>Don&apos;t have an account? <span className='font-medium text-primary'>Sign Up</span></p>
+            <p className='text-center mt-3 text-medium font-normal'>Don&apos;t have an account? <span className='font-medium text-primary'>Sign Up</span></p>
         </div>
     );
 }

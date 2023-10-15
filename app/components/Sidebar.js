@@ -46,41 +46,61 @@ const Sidebar = () => {
 
             <div className="mt-6 flex flex-col gap-1 ml-3 w-full">
                 <Link href='/dashboard'>
-                    <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
-                    transition ease-in-out duration-500">
-                        <RiFileList2Line size={20} color="#828282"/>
+
+                    <div className={`flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+                    transition ease-in-out duration-500 ${pathname === '/dashboard' ? 'bg-hover-bg text-primary' : ''}`}>
+                        <RiFileList2Line size={20} className={`text-gray-500 ${pathname === '/dashboard' ? ' text-primary' : ''}`}/>
                         
-                        <p className="font-md text-sm text-gray-600">Events</p>
+                        <p className={`font-md text-sm text-gray-600 group-hover:text-primary
+                            group-hover:font-semibold group-transition ease-in-out duration-500
+                            ${pathname === '/dashboard' ? ' text-primary font-medium' : ''}`}
+                        >
+                            Events
+                      </p>
                     </div>
                 </Link>
 
                 <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
-                    <FaLink size={20} color="#828282"/>
+                    <FaLink size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
-                     group-hover:font-semibold group-transition ease-in-out duration-500">Pipeline</p>
+                        group-hover:font-semibold group-transition ease-in-out duration-500"
+                        >
+                            Pipeline
+                    </p>
                 </div>
 
                 <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
-                    <RiShareBoxFill size={20} color="#828282"/>
+                    <RiShareBoxFill size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
-                     group-hover:font-semibold group-transition ease-in-out duration-500">Source</p>
+                     group-hover:font-semibold group-transition ease-in-out duration-500"
+                    >
+                        Source
+                    </p>
                 </div>
 
                 <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
-                    <RiFolderReceivedFill size={20} color="#828282"/>
+                    <RiFolderReceivedFill size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
-                     group-hover:font-semibold group-transition ease-in-out duration-500">Destination</p>
+                        group-hover:font-semibold group-transition ease-in-out duration-500"
+                    >
+                        Destination
+                    </p>
                 </div>
 
-                <Link href='/dashboard/transformations' className={` ${pathname === '/dashboard/transformations' ? style : ''}`}>
-                    <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
-                    transition ease-in-out duration-500">
-                        <RxTransform size={20} color="#828282"/>
-                        <p className="font-md text-sm text-gray-600 group-hover:text-primary
-                        group-hover:font-semibold group-transition ease-in-out duration-500">Transformations</p>
+                <Link href='/dashboard/transformations'>
+                    <div className={`flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+                        transition ease-in-out duration-500 ${pathname === '/dashboard/transformations' ? 'group bg-hover-bg text-primary' : ''}`}>
+                        <RxTransform size={20} className={` text-gray-500 ${pathname === '/dashboard/transformations' ? 'text-primary' : ''}`}/>
+
+                        <p className={`font-md text-sm text-gray-600 group-hover:text-primary
+                            group-hover:font-semibold group-transition ease-in-out duration-500
+                            ${pathname === '/dashboard/transformations' ? 'text-primary font-md' : ''}`}
+                        >
+                            Transformations
+                        </p>
                     </div>
                 </Link>
 
@@ -92,17 +112,20 @@ const Sidebar = () => {
             <div className="mt-6 flex flex-col gap-1 ml-3 w-full ">
                 <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
-                    <LuUser size={20} color="#828282"/>
+                    <LuUser size={20} className="text-gray-500"/>
                     
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
-                     group-hover:font-semibold group-transition ease-in-out duration-500">Account</p>
+                        group-hover:font-semibold group-transition ease-in-out duration-500"
+                    >
+                        Account
+                    </p>
                 </div>
 
                 <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                     transition ease-in-out duration-500">
-                    <LuSettings size={20} color="#828282" className="group-hover:text-primary"/>
+                    <LuSettings size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
-                     group-hover:font-semibold group-transition ease-in-out duration-500"
+                        group-hover:font-semibold group-transition ease-in-out duration-500"
                     >
                         Settings
                     </p>
@@ -120,9 +143,7 @@ const Sidebar = () => {
                 <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                     transition ease-in-out duration-500">
                     <GoBook size={20} className="text-primary"/>
-                    <p className="font-semibold text-sm text-primary ">
-                        Documentation
-                    </p>
+                    <p className="font-semibold text-sm text-primary ">Documentation</p>
                 </div>
             </div>
         </div>
