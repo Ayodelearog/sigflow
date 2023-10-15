@@ -74,7 +74,12 @@ const Transformations = () => {
                             <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center">Gotham Asylum</div>
                             <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center">10th Aug, 2023</div>
                             <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center pr-8 relative">
-                                <span className='px-3 py-1 bg-hover-bg rounded font-medium text-xs text-primary'>Paused</span> <BsThreeDotsVertical size={20} color="#828282" />
+                                <span className='px-3 py-1 bg-hover-bg rounded font-medium text-xs text-primary'>Paused</span> <BsThreeDotsVertical size={20} color="#828282" onClick={toggleViewMore} className='cursor-pointer active:text-primary'  />
+                                { viewMore && <div className='p-4 w-max rounded flex flex-col gap-2 bg-white absolute top-10 right-10 transition-all duration-300 shadow-md'>
+                                    <div className='flex gap-2 items-center'><LiaEyeSolid size={13} className='text-gray-800' /> <p className='font-normal text-xs text-gray-800'>View Transformation</p></div>
+                                    <div className='flex gap-2 items-center'><BsArchive size={13} className='text-gray-800' /> <p className='font-normal text-xs text-gray-800'>Archive Transformation</p></div>
+                                    <div className='flex gap-2 items-center'><RiDeleteBinLine size={13} className='text-red-600' /> <p className='font-normal text-xs text-red-600 '>Delete</p></div>
+                                </div>}
                             </div>
                         </div>
 
@@ -100,12 +105,8 @@ const Transformations = () => {
                             <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center">Gotham Asylum</div>
                             <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center">10th Aug, 2023</div>
                             <div class="col-span-1 p-4 font-normal text-sm text-gray-600 flex justify-between items-center pr-8 relative">
-                                <span className='px-3 py-1 bg-gray-200 rounded font-medium text-xs text-white'>Archived</span> <BsThreeDotsVertical size={20} color="#828282" onClick={toggleViewMore} className='cursor-pointer active:text-primary' />
-                                { viewMore && <div className='p-4 w-max rounded flex flex-col gap-2 bg-white absolute top-10 right-10 transition-all duration-300 shadow-md'>
-                                    <div className='flex gap-2 items-center'><LiaEyeSolid size={13} className='text-gray-800' /> <p className='font-normal text-xs text-gray-800'>View Transformation</p></div>
-                                    <div className='flex gap-2 items-center'><BsArchive size={13} className='text-gray-800' /> <p className='font-normal text-xs text-gray-800'>Archive Transformation</p></div>
-                                    <div className='flex gap-2 items-center'><RiDeleteBinLine size={13} className='text-red-600' /> <p className='font-normal text-xs text-red-600 '>Delete</p></div>
-                                </div>}
+                                <span className='px-3 py-1 bg-gray-200 rounded font-medium text-xs text-white'>Archived</span> <BsThreeDotsVertical size={20} color="#828282"/>
+                                
                             </div>
                         </div>
                     </div>
