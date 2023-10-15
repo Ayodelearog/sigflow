@@ -63,7 +63,9 @@ const SignIn = () => {
     }
 
     const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
+        if (formData.password !== '') {
+            setShowPassword(!showPassword);
+        }
     };
       
 
