@@ -16,7 +16,7 @@ const Transformations = () => {
         if(userData === null) {
             router.push('/')
         }
-    }, [])
+    }, [router])
 
 
    

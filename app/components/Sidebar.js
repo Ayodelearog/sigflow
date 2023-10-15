@@ -40,6 +40,7 @@ const Sidebar = () => {
                     src='/chevron-selector-vertical.png'
                     width={15}
                     height={15}
+                    alt=""
                 />
             </div>
 

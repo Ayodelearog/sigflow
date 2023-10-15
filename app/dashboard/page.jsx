@@ -12,7 +12,7 @@ const Dashboard = () => {
         if(userData === null) {
             router.push('/')
         }
-    }, [])
+    }, [router])
     return (
         <div>This is events page</div>
     );

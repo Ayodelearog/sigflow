@@ -149,7 +149,7 @@ const SignIn = () => {
                         </div>
                     </div>
             </div>
-                <p className='text-center mt-3 text-medium font-normal'>Don't have an account? <span className='font-medium text-primary'>Sign Up</span></p>
+                <p className='text-center mt-3 text-medium font-normal'>Don&apos;t have an account? <span className='font-medium text-primary'>Sign Up</span></p>
         </div>
     );
 }
