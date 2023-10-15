@@ -71,13 +71,13 @@ const SignIn = () => {
 
 
     return (
-        <div className='w-ful h-screen flex flex-col  py-8 px-4 mb-96'>
+        <div className='w-full h-screen flex flex-col overflow-hidden  py-8 px-4'>
             <Image
                 src="/Sigflow logo.png"
                 width={90}
                 height={25}
                 alt="Sigflow logo"
-                className='mb-12'
+                className='mb-4'
             />
 
             <div className=' mx-auto w-auto p-8 border border-solid rounded-lg border-gray-200'>
@@ -96,7 +96,7 @@ const SignIn = () => {
                         />
                     </div>
 
-                    <div className='flex flex-col w-full gap-1 mt-4'>
+                    <div className='flex flex-col w-full gap-1 mt-2'>
                         <label htmlFor="password" className='font-normal text-sm'>Password</label>
                         <div className="relative w-full">
                             <input 
@@ -129,26 +129,26 @@ const SignIn = () => {
                 </form>
 
 
-                    <div className='my-6'>
+                    <div className='my-4'>
                         <p className='text-center my-6 text-lg font-medium text-gray-400'>OR</p>
 
-                        <div className='grid grid-rows-2 grid-cols-2 gap-6 place-items-center'>
+                        <div className='grid grid-rows-2 grid-cols-2 gap-4 place-items-center'>
                             <div className='flex items-center gap-2
                                 border-2 border-solid rounded-lg border-gray-200
-                                py-2 px-3 w-max text-m font-normal'
-                            >Sign in with GitHub <BiLogoGithub size={32} />
+                                py-2 px-3 w-max text-sm font-normal'
+                            >Sign in with GitHub <BiLogoGithub size={24} />
                             </div>
 
                             <div className='flex items-center gap-2
                                 border-2 border-solid rounded-lg border-gray-200
                                 py-2 px-3 w-max text-m font-normal'
-                            >Sign in with Google <FcGoogle size={32} />
+                            >Sign in with Google <FcGoogle size={24} />
                             </div>
 
                             <div className='flex items-center gap-2
                                 border-2 border-solid rounded-lg border-gray-200
                                 py-2 px-3 w-max text-m font-normal col-span-2'
-                            >Sign in with SSO <HiOutlineKey color='#32D583' size={32} />
+                            >Sign in with SSO <HiOutlineKey color='#32D583' size={24} />
                             </div>
                         </div>
                     </div>

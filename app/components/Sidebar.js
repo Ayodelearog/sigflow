@@ -23,7 +23,7 @@ const Sidebar = () => {
     }
 
     return (
-        <div className=" overflow-y-auto">
+        <div className=" h-screen">
         <div className="px-8 pt-10 pb-5 border-b border-gray-200">
             <Image
                 src="/Sigflow logo.png"
@@ -34,8 +34,8 @@ const Sidebar = () => {
             />
 
             <div className="flex justify-between items-center
-             mt-7 p-4 w-full border-2px rounded-md bg-gray-300">
-                <p>Sigflow</p>
+             mt-7 p-4 w-full border-2px rounded-md bg-gray-300 h-8">
+                <p className="font-medium text-sm text-gray-900">Sigflow</p>
                 <Image 
                     src='/chevron-selector-vertical.png'
                     width={15}
@@ -44,10 +44,10 @@ const Sidebar = () => {
                 />
             </div>
 
-            <div className="mt-6 flex flex-col gap-1 ml-3 w-full">
+            <div className="mt-1 flex flex-col gap-1 ml-3 w-full">
                 <Link href='/dashboard'>
 
-                    <div className={`flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+                    <div className={`flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                     transition ease-in-out duration-500 ${pathname === '/dashboard' ? 'bg-hover-bg text-primary' : ''}`}>
                         <RiFileList2Line size={20} className={`text-gray-500 ${pathname === '/dashboard' ? ' text-primary' : ''}`}/>
                         
@@ -60,7 +60,7 @@ const Sidebar = () => {
                     </div>
                 </Link>
 
-                <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+                <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
                     <FaLink size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
@@ -70,7 +70,7 @@ const Sidebar = () => {
                     </p>
                 </div>
 
-                <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+                <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
                     <RiShareBoxFill size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
@@ -80,7 +80,7 @@ const Sidebar = () => {
                     </p>
                 </div>
 
-                <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+                <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
                     <RiFolderReceivedFill size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
@@ -91,7 +91,7 @@ const Sidebar = () => {
                 </div>
 
                 <Link href='/dashboard/transformations'>
-                    <div className={`flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+                    <div className={`flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                         transition ease-in-out duration-500 ${pathname === '/dashboard/transformations' ? 'group bg-hover-bg text-primary' : ''}`}>
                         <RxTransform size={20} className={` text-gray-500 ${pathname === '/dashboard/transformations' ? 'text-primary' : ''}`}/>
 
@@ -108,9 +108,9 @@ const Sidebar = () => {
             
         </div>
 
-        <div className="px-8 pb-5 flex flex-col justify-between gap-20 ">
+        <div className="px-8 pb-2 flex flex-col justify-between gap-40 ">
             <div className="mt-6 flex flex-col gap-1 ml-3 w-full ">
-                <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+                <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
                     <LuUser size={20} className="text-gray-500"/>
                     
@@ -121,7 +121,7 @@ const Sidebar = () => {
                     </p>
                 </div>
 
-                <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+                <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                     transition ease-in-out duration-500">
                     <LuSettings size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
@@ -132,15 +132,15 @@ const Sidebar = () => {
                 </div>
             </div>
 
-            <div className="mt-6 flex flex-col gap-1 ml-3 w-full ">
-                <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+            <div className="flex flex-col gap-1 ml-3 w-full ">
+                <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
                     <GoBook size={20} className="text-primary"/>
                     
                     <p className="font-semibold text-sm text-primary ">Help</p>
                 </div>
 
-                <div className="flex gap-3 items-center w-full py-3 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
+                <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                     transition ease-in-out duration-500">
                     <GoBook size={20} className="text-primary"/>
                     <p className="font-semibold text-sm text-primary ">Documentation</p>

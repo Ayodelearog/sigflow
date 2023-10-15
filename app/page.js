@@ -3,7 +3,7 @@ import SignIn from './SignIn/page'
 
 export default function Home() {
   return (
-    <main>
+    <main className='w-screen'>
       <SignIn />
     </main>
   )
