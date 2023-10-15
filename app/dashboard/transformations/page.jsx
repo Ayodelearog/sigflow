@@ -28,10 +28,10 @@ const Transformations = () => {
     }
 
     return (
-        <section className='  flex flex-col scroll-smooth'>
-            <div className=' min-h-screen '>
+        <section className='  flex flex-col scroll-smooth h-full'>
+            <div className=' min-h-full '>
                 <div className="flex justify-between">
-                    <h1 className="font-semi-bold text-lg">Transformations</h1>
+                    <h1 className="font-bold text-lg">Transformation</h1>
 
                     <div className="flex flex-col gap-5">
                         <div className="flex gap-3">
@@ -53,7 +53,7 @@ const Transformations = () => {
                                 <input 
                                     type="search" name='email'
                                     placeholder="Search transformation"
-                                    className='border border-solid rounded-lg border-gray-200 py-1 px-2 w-full'
+                                    className='border border-solid rounded-lg border-gray-200 py-1 px-2 w-full placeholder:text-sm placeholder:text-gray-600 placeholder:font-medium'
                                 />
                                 <div className="absolute right-3 top-2">
                                     <IoSearch size={20} className="text-primary" />
@@ -63,8 +63,8 @@ const Transformations = () => {
                     </div>
                 </div>
 
-                <div className=' border rounded-md mt-8 flex flex-col justify-between pb-6 h-full'>
-                    <div class="grid grid-cols-3 gap-1 py-5 mb-28">
+                <div className=' border rounded-md mt-8 flex flex-col justify-between pb-6 h-3/4'>
+                    <div class="grid grid-cols-3 gap-1 py-5 ">
                         <div class="col-span-1 p-4 font-normal text-sm text-gray-600">Name</div>
                         <div class="col-span-1 p-4 font-normal text-sm text-gray-600 ml-1">Creation Date</div>
                         <div class="col-span-1 p-4 font-normal text-sm text-gray-600 pl-6">Status</div>

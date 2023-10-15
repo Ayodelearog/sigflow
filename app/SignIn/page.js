@@ -71,17 +71,17 @@ const SignIn = () => {
 
 
     return (
-        <div className='w-full h-screen flex flex-col overflow-hidden  py-8 px-4'>
+        <div className='w-full h-screen flex flex-col overflow-hidden  py-8 px-8'>
             <Image
                 src="/Sigflow logo.png"
                 width={90}
                 height={25}
                 alt="Sigflow logo"
-                className='mb-4'
+                className='mb-12'
             />
 
             <div className=' mx-auto w-auto p-8 border border-solid rounded-lg border-gray-200'>
-                <h1 className='text-center text-xl font-medium'>Welcome back!</h1>
+                <h1 className='text-center text-2xl font-medium'>Welcome back!</h1>
                 <p className='text-center text-sm font-normal mt-1 text-gray-500'>Sign in to access your account</p>
 
                 <form onSubmit={handleSignIn} className='w-full flex flex-col gap-2 mt-8 items-center'>

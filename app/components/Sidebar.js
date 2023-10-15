@@ -1,13 +1,13 @@
 'use client'
 import Image from "next/image";
-import { RiFileList2Line } from 'react-icons/ri';
-import { FaLink } from 'react-icons/fa';
-import { RiShareBoxFill } from 'react-icons/ri';
-import { RiFolderReceivedFill } from 'react-icons/ri';
+import { LuLink } from 'react-icons/lu';
+import { BsFileText } from 'react-icons/bs';
+import { SlSettings } from 'react-icons/sl';
+
 import { RxTransform } from 'react-icons/rx';
 import { LuUser } from 'react-icons/lu';
-import { LuSettings } from 'react-icons/lu';
 import { GoBook } from 'react-icons/go';
+import { CiShare1 } from 'react-icons/ci';
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -34,8 +34,8 @@ const Sidebar = () => {
             />
 
             <div className="flex justify-between items-center
-             mt-7 p-4 w-full border-2px rounded-md bg-gray-300 h-8">
-                <p className="font-medium text-sm text-gray-900">Sigflow</p>
+             mt-7 p-4 w-full border-2px rounded-md bg-gray-100 h-8">
+                <p className="font-bold text-sm text-gray-900">Sigflow</p>
                 <Image 
                     src='/chevron-selector-vertical.png'
                     width={15}
@@ -49,7 +49,7 @@ const Sidebar = () => {
 
                     <div className={`flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                     transition ease-in-out duration-500 ${pathname === '/dashboard' ? 'bg-hover-bg text-primary' : ''}`}>
-                        <RiFileList2Line size={20} className={`text-gray-500 ${pathname === '/dashboard' ? ' text-primary' : ''}`}/>
+                        <BsFileText size={20} className={`text-gray-500 ${pathname === '/dashboard' ? ' text-primary' : ''}`}/>
                         
                         <p className={`font-md text-sm text-gray-600 group-hover:text-primary
                             group-hover:font-semibold group-transition ease-in-out duration-500
@@ -62,7 +62,7 @@ const Sidebar = () => {
 
                 <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
-                    <FaLink size={20} className="text-gray-500"/>
+                    <LuLink size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
                         group-hover:font-semibold group-transition ease-in-out duration-500"
                         >
@@ -72,7 +72,7 @@ const Sidebar = () => {
 
                 <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
-                    <RiShareBoxFill size={20} className="text-gray-500"/>
+                    <CiShare1 size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
                      group-hover:font-semibold group-transition ease-in-out duration-500"
                     >
@@ -82,7 +82,7 @@ const Sidebar = () => {
 
                 <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
-                    <RiFolderReceivedFill size={20} className="text-gray-500"/>
+                    <CiShare1 size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
                         group-hover:font-semibold group-transition ease-in-out duration-500"
                     >
@@ -108,7 +108,7 @@ const Sidebar = () => {
             
         </div>
 
-        <div className="px-8 pb-2 flex flex-col justify-between gap-40 ">
+        <div className="px-8 pb-2 flex flex-col justify-between gap-80 ">
             <div className="mt-6 flex flex-col gap-1 ml-3 w-full ">
                 <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                 transition ease-in-out duration-500">
@@ -123,7 +123,7 @@ const Sidebar = () => {
 
                 <div className="flex gap-3 items-center w-full py-2 px-3 rounded-md group hover:bg-hover-bg cursor-pointer
                     transition ease-in-out duration-500">
-                    <LuSettings size={20} className="text-gray-500"/>
+                    <SlSettings size={20} className="text-gray-500"/>
                     <p className="font-md text-sm text-gray-600 group-hover:text-primary
                         group-hover:font-semibold group-transition ease-in-out duration-500"
                     >

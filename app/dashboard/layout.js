@@ -8,10 +8,10 @@ const DashboardLayout = ({ children }) => {
                 <Sidebar />
             </div>
 
-            <div class="col-span-4 min-h-screen relative">
+            <div class="col-span-4 h-screen relative">
                 <Header />
 
-                <div className="w-full h-screen pl-10 pr-10 pt-8 overflow-y-hidden hover:overflow-y-auto scroll-smooth ">
+                <div className="w-full h-full pl-10 pr-10 pt-8 overflow-y-hidden hover:overflow-y-auto scroll-smooth ">
                     {children}
                 </div>
             </div>
