@@ -119,12 +119,12 @@ const Transformations = () => {
                     </div>
                     <div className='justify-end'>
                         <div className="w-6 h-6 bg-gray-200 flex justify-center items-center rounded ">
-                            <p className="text-sm font-sm  text-white leading-3">10</p>
+                            <p className="text-sm font-sm  text-gray-400 leading-3">10</p>
                         </div>
                     </div>
                     <div className='justify-end'>
                         <div className="w-6 h-6 bg-gray-200 flex justify-center items-center rounded ">
-                            <p className="text-sm font-sm  text-white leading-3">15</p>
+                            <p className="text-sm font-sm  text-gray-400 leading-3">15</p>
                         </div>
                     </div>
                 </div>
